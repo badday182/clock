@@ -1,0 +1,140 @@
+@import "null.css";
+/* &display=swap */
+
+/* Универсальное свойство */
+/* background: red url("../img/ava.png") 0 0 / cover no-repeat; */
+
+/* background: цвет картина или градиент позиция / размер повторение фиксация */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+/* .clock {
+	width: 200px;
+	height: 200px;
+	padding: 30px;
+} */
+.cyferblat {
+		margin: 30px;
+		
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background: rgb(109, 138, 224);
+		position: relative;
+}
+.cyferblat__part1,.cyferblat__part2,.cyferblat__part3,.cyferblat__part4,.cyferblat__part5,.cyferblat__part6,.cyferblat__part7,.cyferblat__part8,.cyferblat__part9,.cyferblat__part10,.cyferblat__part11,.cyferblat__part12 {
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	width: 2px;
+	height: 95px; 
+transform-origin:bottom;
+}
+.cyferblat__part1::before,.cyferblat__part2::before,.cyferblat__part3::before,.cyferblat__part4::before,.cyferblat__part4::before,.cyferblat__part5::before,.cyferblat__part6::before,.cyferblat__part7::before,.cyferblat__part8::before,.cyferblat__part9::before,.cyferblat__part10::before,.cyferblat__part11::before,.cyferblat__part12::before {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 16px;
+	background-color: rgb(43, 77, 116);
+}
+.cyferblat__part2 {
+	transform: rotate(30deg);
+
+}
+.cyferblat__part3 {
+		transform: rotate(60deg);
+}
+.cyferblat__part4 {
+	transform: rotate(90deg);
+}
+.cyferblat__part5 {
+	transform: rotate(120deg);
+
+}
+.cyferblat__part6 {
+	transform: rotate(150deg);
+}
+.cyferblat__part7 {
+	transform: rotate(180deg);
+}
+.cyferblat__part8 {
+	transform: rotate(210deg);
+}
+.cyferblat__part9 {
+	transform: rotate(240deg);
+}
+.cyferblat__part10 {
+	transform: rotate(270deg);
+}
+.cyferblat__part11 {
+	transform: rotate(300deg);
+}
+.cyferblat__part12 {
+	transform: rotate(330deg);
+}
+.cyferblat__sec {
+		position: absolute;
+	top: 15px;
+	left: 50%;
+	width: 1px;
+	height: 85px; 
+	background-color: red;
+transform-origin:bottom;
+animation: secmove 2.5s steps(60,start) infinite  3s;
+}
+.cyferblat__sec::after {
+	content: "";
+		display: block;
+	width: 10px;
+	height: 10px;
+		/* background-color: rgb(173, 113, 113); */
+		transform: translate(-4.5px,85px);
+border-radius: 50%;
+border: 2px solid red;
+/* transition: 60s; */
+}
+@keyframes secmove {
+	0% {	}
+	100% {
+			transform: rotate(360deg);	}
+}
+
+.cyferblat__min {
+			position: absolute;
+	top: 25px;
+	left: 49.3%;
+	width: 5px;
+	height: 75px; 
+	border-radius: 2px;
+	background-color: rgb(13, 47, 75);
+transform-origin:bottom;
+animation: minmove 150s linear infinite 3s;
+
+}
+
+@keyframes minmove {
+	0% {	}
+	100% {
+			transform: rotate(360deg);	}
+}
+
+.cyferblat__hour {
+	position: absolute;
+	top: 55px;
+	left: 48.5%;
+	width: 8px;
+	height: 45px; 
+	border-radius: 2px;
+	background-color: rgb(13, 47, 75);
+transform-origin:bottom;
+animation: hourmove 2300s linear infinite 3s;
+
+}
+@keyframes hourmove {
+	0% {	}
+	100% {
+			transform: rotate(360deg);	}
+}
